@@ -1,15 +1,12 @@
 # Дана строка, состоящая из русских слов, разделенных пробелами (одним или
 # несколькими). Найти длину самого длинного слова.
 
-s = input('Введите слова: ')
-word = ''
-maxLen = 0
-maxWord = ''
-for c in s + ' ':
-    if c == ' ':
-        if len(word) > maxLen:
-            maxWord = word
-        word = ''
-    else:
-        word += c
-print("\nСамое длинное слово:", maxWord)
+a = input('Введите слова:').split()
+
+c = 0
+
+for i in range(len(a)):
+    if len(a[i]) > c:
+        c = len(a[i])
+        word = a[i]
+print('\nСамое длинное слово:', word)
